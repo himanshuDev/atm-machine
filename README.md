@@ -36,7 +36,7 @@ To run this repo on local
 1. clone this repo 
   <br>**$ git clone https://github.com/himanshuDev/atm-machine.git**
 
-2. Once cloned, execute go inside the atm-machine directory and execute
+2. Once cloned, Go inside the atm-machine directory and execute
   <br>**$ mvn clean install**
   <br>This will build the project
 
