@@ -32,40 +32,47 @@ Following dependencies must be installed.
 
 ### Installing
 To run this repo on local
-1. clone this repo
-   $ git clone https://github.com/himanshuDev/atm-machine.git
+
+1. clone this repo 
+  <br>**$ git clone https://github.com/himanshuDev/atm-machine.git**
+
 2. Once cloned, execute go inside the atm-machine directory and execute
-   $ mvn clean install
-   This will build the project
-3. Once project is build, Copy the property file [https://github.com/himanshuDev/atm-machine/blob/main/src/main/resources/application.properties]
-   in a temp folder and modify the property to put the logs at yours system desired folder
-   logging.file.path= path_to_generate_log_file
-   example:
-   logging.file.path= /Users/Work/atm-machine/logs
+  <br>**$ mvn clean install**
+  <br>This will build the project
+
+3. Once project is build, Copy the property file 
+<br>[https://github.com/himanshuDev/atm-machine/blob/main/src/main/resources/application.properties]
+   in a 
+<br>temp folder and modify the below property to put the logs at yours system desired folder
+<br>**logging.file.path= path_to_generate_log_file**<br>
+   example:<br>
+   **logging.file.path= /Users/Work/atm-machine/logs**<br>
    this should be a valid path.
-4. to execute the project, provide the following command.
-   $ java -jar ~/atm-machine/target/atm-machine-1.0.0.jar --spring.config.location=file:///Users/...../application.properties
-                path to jar [build in step 2]                                      spring property externalized file.
-5. Once the application is up and running, open chrome and put below url in the address bar.
-   http://localhost:8080/atm-machine-api.html
+
+4. to execute the project, provide the following command.<br>
+   **$ java -jar ~/atm-machine/target/atm-machine-1.0.0.jar --spring.config.location=file:///Users/...../application.properties**
+              
+5. Once the application is up and running, open chrome and put below url in the address bar.<br>
+   http://localhost:8080/atm-machine-api.html<br>
    This is swagger API docs.
-6. You can try the APIs directly from there or use below curl command to test the application
+   
+6. You can try the APIs directly from there or use below curl command to test the application<br>
 
-  6.1 Get list of all accounts [audit feature]
+  &nbsp;&nbsp;   **Get list of all accounts [audit feature]**<br>
 
-   curl -X 'GET' \
+  &nbsp;  $ curl -X 'GET' \
   'http://localhost:8080/atm/api/account-inventory' \
   -H 'accept: application/json'
 
-  6.2 Get list of atm inventory [audit feature]
+ &nbsp;&nbsp;   **Get list of atm inventory** [audit feature] 
 
-   curl -X 'GET' \
+  &nbsp;  curl -X 'GET' \
   'http://localhost:8080/atm/api/atm-inventory' \
   -H 'accept: application/json'
 
-  6.3 Check balance for a user
+ &nbsp;&nbsp;   **Check balance for a user**
 
-   curl -X 'POST' \
+  &nbsp;&nbsp;   curl -X 'POST' \
   'http://localhost:8080/atm/api/balance' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
@@ -74,9 +81,9 @@ To run this repo on local
   "userName": "clint_west"
    }'
 
-   6.4 With draw money from ATM.
+  &nbsp;&nbsp;   **With draw money from ATM.**
 
-   curl -X 'POST' \
+  &nbsp;&nbsp;   curl -X 'POST' \
   'http://localhost:8080/atm/api/withdraw' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
